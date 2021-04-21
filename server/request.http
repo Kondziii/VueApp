@@ -1,0 +1,64 @@
+GET http://localhost:8081/products
+
+################
+GET http://localhost:8081/products/1
+
+#########
+POST http://localhost:8081/products
+Content-Type: application/json
+
+{
+    "name":"dsdf",
+    "description":"sdfds",
+    "price":"100",
+    "weight":"2340",
+    "categoryId":"2"
+}
+
+##############################
+PUT http://localhost:8081/products/3
+Content-Type: application/json
+
+{
+    "name":"gf",
+    "description":"fajny",
+    "price":"3500",
+    "weight":"0.7",
+    "categoryId":1
+}
+
+#############################
+GET http://localhost:8081/categories
+
+############################
+GET http://localhost:8081/orders
+
+##############################
+POST http://localhost:8081/orders
+Content-Type: application/json
+
+{
+    //"order_stateId":2,
+    "user_name":"sdf",
+    "email":"costam@ga.com",
+    "phone_number":"123456789"
+}
+########
+PUT http://localhost:8081/orders/3/CANCELED
+
+############
+GET http://localhost:8081/orders/DISAPPROVED
+
+
+#############
+GET http://localhost:8081/states
+
+################
+POST http://localhost:8081/orders/products
+Content-Type: application/json
+
+{
+    "orderId": 1,
+    "productId": 2,
+    "amount": 4
+}
